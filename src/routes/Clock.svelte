@@ -1,5 +1,13 @@
 <script>
     import { onMount } from 'svelte';
+
+    import Day_jpg from '$lib/assets/Day/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg';
+    import Day_webm from '$lib/assets/Day/85882f90ad8ca69467610883a9fa95ecc2f071ab.webm';
+    import Day_mp4 from '$lib/assets/Day/4f3b30e2e72655a8eb948bd9d3ba66a30681a6b9.mp4';
+
+    import Night_jpg from '$lib/assets/Night/386c658bc267ea1a1973abd8f40990d66233caae.jpg';
+    import Night_webm from '$lib/assets/Night/124bf94415accfef96f86cbbe566e42374d53b76.webm';
+    import Night_mp4 from '$lib/assets/Night/8df64a76003112a9480cf2c116a88c2b841cc44f.mp4';
     
     let date = new Date().toLocaleTimeString('sv-SE', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     const hours = new Date().getHours();
@@ -78,9 +86,9 @@
   autoplay 
   muted 
   loop 
-  poster='src/lib/assets/Day/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg'>
-  <source src='src/lib/assets/Day/85882f90ad8ca69467610883a9fa95ecc2f071ab.webm' type="video/webm">
-  <source src='src/lib/assets/Day/4f3b30e2e72655a8eb948bd9d3ba66a30681a6b9.mp4' type="video/mp4">
+  poster={Day_jpg}>
+  <source src={Day_webm} type="video/webm">
+  <source src={Day_mp4} type="video/mp4">
 </video>
   {:else}
   <video 
@@ -88,9 +96,9 @@
   autoplay 
   muted 
   loop 
-  poster='src/lib/assets/Night/386c658bc267ea1a1973abd8f40990d66233caae.jpg'>
-  <source src='src/lib/assets/Night/124bf94415accfef96f86cbbe566e42374d53b76.webm' type="video/webm">
-  <source src='src/lib/assets/Night/8df64a76003112a9480cf2c116a88c2b841cc44f.mp4' type="video/mp4">
+  poster={Night_jpg}>
+  <source src={Night_webm} type="video/webm">
+  <source src={Night_mp4} type="video/mp4">
 </video>
 {/if}
   </section>
