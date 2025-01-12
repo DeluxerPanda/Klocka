@@ -44,14 +44,14 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      background-image: url('$lib/assets/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg');
+      background-image: url('$lib/assets/Day.gif');
     }
   
     .nighttime {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      background-image: url('$lib/assets/386c658bc267ea1a1973abd8f40990d66233caae.jpg');
+      background-image: url('$lib/assets/Night.gif');
     }
   </style>
   
