@@ -1,13 +1,13 @@
 <script>
     import { onMount } from 'svelte';
     
-    let date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    let date = new Date().toLocaleTimeString('SE-sv', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     const hours = new Date().getHours();
     let isDayTime = hours > 6 && hours < 20;
     
     onMount(() => {
       const interval = setInterval(() => {
-        date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        date = new Date().toLocaleTimeString('SE-sv', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
         const newHours = new Date().getHours();
         isDayTime = newHours > 6 && newHours < 20;
       }, 1000);
