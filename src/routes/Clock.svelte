@@ -34,7 +34,7 @@
     }
   
     .clockDisplay {
-      font-size: 5rem;
+      font-size: 11vw;
       font-weight: bolder;
       border-radius: 15px;
       color: #ffffff;
