@@ -34,25 +34,20 @@
     }
   
     .clockDisplay {
-      font-size: 11vw;
+      font-size: 10vw;
       font-weight: bolder;
       border-radius: 15px;
       color: #ffffff;
+      position: absolute;
     }
   
-    .daytime {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-image: url('$lib/assets/Day.gif');
+    video {
+      height: 100%;
+      width: 177.77777778vh; /* 100 * 16 / 9 */
+      min-width: 100%;
+      min-height: 56.25vw; /* 100 * 9 / 16 */
     }
-  
-    .nighttime {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-image: url('$lib/assets/Night.gif');
-    }
+    
     footer {
       background-color: #171d25;
       border-radius: 10px;
@@ -71,13 +66,36 @@
   <title>Start Page - {date}</title> 
 </svelte:head>
 
-  <section class={isDayTime ? 'daytime' : 'nighttime'}>
+
+
+  <section>
     <p class="clockDisplay">
       {date}
     </p>
+    {#if isDayTime}
+<video 
+  playsinline 
+  autoplay 
+  muted 
+  loop 
+  poster='src/lib/assets/Day/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg'>
+  <source src='src/lib/assets/Day/85882f90ad8ca69467610883a9fa95ecc2f071ab.webm' type="video/webm">
+  <source src='src/lib/assets/Day/4f3b30e2e72655a8eb948bd9d3ba66a30681a6b9.mp4' type="video/mp4">
+</video>
+  {:else}
+  <video 
+  playsinline 
+  autoplay 
+  muted 
+  loop 
+  poster='src/lib/assets/Night/386c658bc267ea1a1973abd8f40990d66233caae.jpg'>
+  <source src='src/lib/assets/Night/124bf94415accfef96f86cbbe566e42374d53b76.webm' type="video/webm">
+  <source src='src/lib/assets/Night/8df64a76003112a9480cf2c116a88c2b841cc44f.mp4' type="video/mp4">
+</video>
+{/if}
   </section>
   
   <footer>
-    <span id="version">Background images are from</span> <a href="https://store.steampowered.com/">Steam</a>
+    <span id="version">Background images/videos are from</span> <a href="https://store.steampowered.com/">Steam</a>
     </footer>
   
