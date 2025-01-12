@@ -53,11 +53,31 @@
       background-position: center;
       background-image: url('$lib/assets/Night.gif');
     }
+    footer {
+      background-color: #171d25;
+      border-radius: 10px;
+      padding: 5px;
+      color: #ffffff;
+      position: absolute;
+      right: 1px;
+      bottom: 1px;
+      font-size: 10px;
+  }
+  a{
+    color: #1a9fff;
+  }
   </style>
-  
+<svelte:head>
+  <title>Start Page - {date}</title> 
+</svelte:head>
+
   <section class={isDayTime ? 'daytime' : 'nighttime'}>
     <p class="clockDisplay">
       {date}
     </p>
   </section>
+  
+  <footer>
+    <span id="version">Background images is from</span> <a href="https://store.steampowered.com/">Steam</a>
+    </footer>
   
