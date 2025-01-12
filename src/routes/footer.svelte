@@ -1,6 +1,6 @@
 
 <footer>
-  Backgrounds are from <a href="https://store.steampowered.com/">Steam</a>
+  This background are from <a href="https://store.steampowered.com/points/shop/app/2861720">Steam</a>
 </footer>
 
 <style>

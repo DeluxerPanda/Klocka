@@ -10,7 +10,7 @@
   </script>
 
 <svelte:head>
-  <title>Start Page - {date}</title> 
+  <title>Klockan är {date}</title>
 </svelte:head>
 
   <section>
