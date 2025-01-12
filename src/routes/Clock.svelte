@@ -12,7 +12,7 @@
         isDayTime = newHours > 6 && newHours < 20;
       }, 1000);
       
-      return () => clearInterval(interval); // Cleanup interval on component unmount
+      return () => clearInterval(interval);
     });
   </script>
   
@@ -24,13 +24,13 @@
     }
   
     section {
-      height: 100vh;   /* Full height of the viewport */
-      width: 100vw;    /* Full width of the viewport */
-      overflow: hidden; /* Prevent scrolling */
-      position: absolute; /* Ensure it covers the entire screen */
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      position: absolute;
       top: 0;
       left: 0;
-      transition: background-image 1s ease-in-out; /* Smooth background transition */
+      transition: background-image 1s ease-in-out;
     }
   
     .clockDisplay {
@@ -42,15 +42,15 @@
   
     .daytime {
       background-repeat: no-repeat;
-      background-size: cover; /* Ensures the image covers the screen */
-      background-position: center; /* Centers the image */
+      background-size: cover;
+      background-position: center;
       background-image: url('$lib/assets/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg');
     }
   
     .nighttime {
       background-repeat: no-repeat;
-      background-size: cover; /* Ensures the image covers the screen */
-      background-position: center; /* Centers the image */
+      background-size: cover;
+      background-position: center;
       background-image: url('$lib/assets/386c658bc267ea1a1973abd8f40990d66233caae.jpg');
     }
   </style>
