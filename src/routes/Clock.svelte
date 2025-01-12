@@ -78,6 +78,6 @@
   </section>
   
   <footer>
-    <span id="version">Background images is from</span> <a href="https://store.steampowered.com/">Steam</a>
+    <span id="version">Background images are from</span> <a href="https://store.steampowered.com/">Steam</a>
     </footer>
   
