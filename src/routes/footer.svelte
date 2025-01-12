@@ -1,24 +1,21 @@
 
-
+<footer>
+  Backgrounds are from <a href="https://store.steampowered.com/">Steam</a>
+</footer>
 
 <style>
-	footer {
-    display: block;
-    text-align: center;
-  height: fit-content;
-  color: #8fbcbb;
-  background-color: #3b4252;
-  padding: 5px;
-  margin: 0;
-  margin-inline: auto;
-  font-size: 1rem;
-  border-radius: 20px;
-  font-weight: bold;
+    footer {
+      background-color: rgba(23, 29, 37, 0.444);
+      border-radius: 10px;
+      padding: 5px;
+      color: #ffffff;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 10px;
   }
   a{
-    color: #8fbcbb;
-  }
-  #version{
-    color: #a3be8c;
+    color: #1a9fff;
+    font-weight: bold;
   }
 </style>
