@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Klocka</title>
+    <link rel="icon" type="image/png-icon" href="/favicon.png">
+    <script>
+
+window.onload = function update() {
+        const klocka = document.getElementById("klocka");
+        const title =  document.getElementById("title");
+        const dayBG = document.getElementById("DayBG");
+        const nightBG = document.getElementById("NightBG");
+
+        const hours = new Date().getHours();
+        const isDayTime = hours > 6 && hours < 20;
+      
+        const time = new Date().toLocaleTimeString('sv-SE', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        klocka.innerText = time;
+        title.innerText = "Klockan är: "+ time;
+        
+        if (isDayTime) {
+            dayBG.style.display = "block";
+            nightBG.style.display = "none";
+        }else{
+            dayBG.style.display = "none";
+            nightBG.style.display = "block";
+        }
+        setInterval(update, 1000);
+    }    
+    
+      </script>
+</head>
+<body>
+
+    <section>
+        <p id="klocka"></p>
+    </section>
+
+<div id="DayBG">
+  <video 
+  playsinline 
+  autoplay 
+  muted 
+  loop 
+  poster="/assets/Day/87fd4f413d9ad44e19cd2876a48e25b4025dce74.jpg">
+  <source src="/assets/Day/85882f90ad8ca69467610883a9fa95ecc2f071ab.webm" type="video/webm">
+  <source src="assets/Day/4f3b30e2e72655a8eb948bd9d3ba66a30681a6b9.mp4" type="video/mp4">
+</video>
+</div>
+
+<div id="NightBG">
+  <video 
+  playsinline 
+  autoplay 
+  muted 
+  loop 
+  poster="assets/Night/386c658bc267ea1a1973abd8f40990d66233caae.jpg">
+  <source src="assets/Night/124bf94415accfef96f86cbbe566e42374d53b76.webm" type="video/webm">
+  <source src="assets/Night/8df64a76003112a9480cf2c116a88c2b841cc44f.mp4" type="video/mp4">
+</video>
+</div>
+
+<style>
+    video {
+    width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: -1;
+    }
+    #NightBG{
+        display: none;
+    }
+    #DayBG{
+        display: block;
+    }
+
+    section, .clockDisplay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    section {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background-image 1s ease-in-out;
+    }
+  
+    #klocka {
+      background-color: rgba(23, 29, 37, 0.444);
+      font-size: 10vw;
+      padding-inline: 25px;
+      font-weight: bolder;
+      border-radius: 15px;
+      color: #ffffff;
+
+    }
+
+  </style>
+</body>
+</html>
