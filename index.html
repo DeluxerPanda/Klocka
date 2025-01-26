@@ -4,35 +4,9 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="title">Klocka</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png-icon" href="/favicon.png">
-  <script>
-        window.onload = function () {
-          const klocka = document.getElementById("klocka");
-          const title =  document.getElementById("title");
-          const dayBG = document.getElementById("DayBG");
-          const nightBG = document.getElementById("NightBG");
-
-        update();
-        setInterval(update, 1000);
-
-        function update(){
-          let hours = new Date().getHours();
-          let isDayTime = hours > 6 && hours < 20;
-          let time = new Date().toLocaleTimeString('sv-SE', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
-          klocka.innerText = time;
-          title.innerText = "Klockan är: "+ time;
-        if (isDayTime) {
-          dayBG.style.display = "block";
-          nightBG.style.display = "none";
-        }else{
-          dayBG.style.display = "none";
-          nightBG.style.display = "block";
-        }
-        } 
-        } 
-
-  </script>
+  <title id="title">Klocka</title>
 </head>
 <body>
   <section>
@@ -62,60 +36,6 @@
       <source src="assets/Night/8df64a76003112a9480cf2c116a88c2b841cc44f.mp4" type="video/mp4">
     </video>
   </div>
-  <style>
-    video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-    #NightBG{
-      display: none;
-    }
-    #DayBG{
-      display: block;
-    }
-    section, .clockDisplay {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    section {
-      color: #ffffff;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: background-image 1s ease-in-out;
-    }
-    #klocka {
-      background-color: rgba(23, 29, 37, 0.444);
-      font-size: 10vw;
-      padding-inline: 25px;
-      font-weight: bolder;
-      border-radius: 15px;
-    }
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(23, 29, 37, 0.444);
-      color: #ffffff;
-      text-align: center;
-    }
-    a{
-      color: #ffffff;
-      font-weight: bold;
-    }
-  </style>
+  <script src="main.js"></script>
 </body>
 </html>
