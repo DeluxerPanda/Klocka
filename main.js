@@ -12,7 +12,7 @@ window.onload = function () {
     let isDayTime = hours > 6 && hours < 20;
     let time = new Date().toLocaleTimeString('sv-SE', { timeZone: 'Europe/Stockholm', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     klocka.innerText = time;
-    title.innerText = "Klockan är: "+ time;
+    title.innerText = "Klockan Ãr: "+ time;
   if (isDayTime) {
     dayBG.style.display = "block";
     nightBG.style.display = "none";
